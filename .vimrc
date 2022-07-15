@@ -3,14 +3,31 @@ call plug#begin()
 Plug 'preservim/nerdtree'
 
 " https://github.com/neoclide/coc.nvim auto completion for js, ts
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
 " https://github.com/sheerun/vim-polyglot syntax highlight for many languages
 Plug 'sheerun/vimrc'
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 
+" https://github.com/iamcco/markdown-preview.nvim 
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+
+" https://github.com/tpope/vim-fugitive
+Plug 'tpope/vim-fugitive'
+
+" https://github.com/mg979/vim-visual-multi
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
+" https://github.com/tomlion/vim-solidity
+" Plug 'tomlion/vim-solidity'
 call plug#end()
 
+" using spaces as indent, anything.
+" Check this https://vi.stackexchange.com/questions/4141/how-to-indent-as-spaces-instead-of-tab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
 
 " NERDTree toggle setup
 nmap <F6> :NERDTreeToggle<CR>
