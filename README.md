@@ -3,3 +3,24 @@
 coc.nvim install 후에 ~/.vim/plugged/coc.nvim 이동 해서 yarn install 하기 \
 :CocInstall coc-json coc-tsserver coc-flow \
 Plug 'sheerun/vim-polyglot' 이건 하이라이트인데, 설치해도 별로 바뀌는게 없음. 걍 빼도됨.
+
+# 자주쓰는 키
+## normal mode
+* h: left 1칸씩 이동
+* j: down
+* k: up
+* l: righ
+
+(e, w, b 는 대문자로 입력시 단어단위가 아닌, 공백을 기준으로 뛰어넘음)
+* e: 단어 끝으로 이동
+* w: 다음 단어의 시작으로 이동
+* b: 단어 처음으로 이동
+
+* zz: 커서를 수직중앙으로 놓음
+* gd: 정의부분으로 이동
+* \#: find
+    * n: 다음 선언으로 이동
+    * shift-n: 이전 선언으로 이동
+
+# link
+- 마크 사용법: https://vim.fandom.com/wiki/Using_marks
