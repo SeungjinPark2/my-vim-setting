@@ -23,5 +23,9 @@ Plug 'sheerun/vim-polyglot' 이건 하이라이트인데, 설치해도 별로 �
     * n: 다음 선언으로 이동
     * shift-n: 이전 선언으로 이동
 
+* dd: 라인 제거 및 복사
+* yy: 라인 복사
+* p: 붙여넣기
+
 # link
 - 마크 사용법: https://vim.fandom.com/wiki/Using_marks
