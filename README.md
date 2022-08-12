@@ -31,3 +31,4 @@ Plug 'sheerun/vim-polyglot' 이건 하이라이트인데, 설치해도 별로 �
 - 마크 사용법: https://vim.fandom.com/wiki/Using_marks
 - 내가 적는것 보다 이거 보는게 낫겠네: https://web.stanford.edu/class/cs107/resources/vim.html
 - https://learnbyexample.github.io/vim_reference/cover.html
+- https://learnvimscriptthehardway.stevelosh.com/preface.html
