@@ -28,6 +28,8 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+set wrap
+set shiftround
 
 " NERDTree toggle setup
 nmap <F6> :NERDTreeToggle<CR>
