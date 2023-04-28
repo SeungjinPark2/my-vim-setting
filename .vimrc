@@ -12,18 +12,11 @@ Plug 'sheerun/vimrc'
 " https://github.com/iamcco/markdown-preview.nvim 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
-" https://github.com/tpope/vim-fugitive
-Plug 'tpope/vim-fugitive'
-
 " https://github.com/mg979/vim-visual-multi
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
-" https://github.com/tomlion/vim-solidity
-" Plug 'tomlion/vim-solidity'
-
 " https://github.com/kburdett/vim-nuuid
 Plug 'kburdett/vim-nuuid'
-
 call plug#end()
 
 " using spaces as indent, anything.
