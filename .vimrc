@@ -34,7 +34,7 @@ set shiftwidth=4
 set expandtab
 set wrap
 set shiftround
-set relativenumber
+set number relativenumber " hybrid relative number mode
 
 " NERDTree toggle setup
 nmap <F6> :NERDTreeToggle<CR>
