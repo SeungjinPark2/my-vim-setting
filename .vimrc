@@ -20,6 +20,10 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 " https://github.com/tomlion/vim-solidity
 " Plug 'tomlion/vim-solidity'
+
+" https://github.com/kburdett/vim-nuuid
+Plug 'kburdett/vim-nuuid'
+
 call plug#end()
 
 " using spaces as indent, anything.
@@ -30,6 +34,7 @@ set shiftwidth=4
 set expandtab
 set wrap
 set shiftround
+set relativenumber
 
 " NERDTree toggle setup
 nmap <F6> :NERDTreeToggle<CR>
@@ -42,6 +47,9 @@ vmap <C-c> y:call system("xclip -selection clipboard -i", getreg("\""))<CR>
 " vmap <C-b> :call setreg("\"",system("xclip -selection clipboard -o"))<CR>p
 imap <C-b> <ESC>:call setreg("\"",system("xclip -selection clipboard -o"))<CR>pa
 "}}
+
+" uuidgen
+map <C-i> <Plug>Nuuid
 
 " flow vim 설정법
 " https://vimawesome.com/plugin/coc-flow coc-flow 설치하되 CocConfig 에서 javascript.validate.enable 를 false 로 셋팅해야함.
