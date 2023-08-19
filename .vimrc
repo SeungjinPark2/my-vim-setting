@@ -1,22 +1,19 @@
 call plug#begin()
-" https://github.com/preservim/nerdtree
 Plug 'preservim/nerdtree'
 
-" https://github.com/neoclide/coc.nvim auto completion for js, ts
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim'
 
-" https://github.com/sheerun/vim-polyglot syntax highlight for many languages
 Plug 'sheerun/vimrc'
-" Plug 'sheerun/vim-polyglot'
 
-" https://github.com/iamcco/markdown-preview.nvim 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
-" https://github.com/mg979/vim-visual-multi
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
-" https://github.com/kburdett/vim-nuuid
 Plug 'kburdett/vim-nuuid'
+
+Plug 'rhysd/rust-doc.vim'
+
+Plug 'Shougo/unite.vim'
 call plug#end()
 
 " using spaces as indent, anything.
@@ -32,6 +29,42 @@ set number relativenumber " hybrid relative number mode
 " NERDTree toggle setup
 nmap <F6> :NERDTreeToggle<CR>
 
+" Coc related mappings
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" use <tab> to trigger completion and navigate to the next complete item
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+
+" use <c-space> for trigger completion
+inoremap <silent><expr> <c-space> coc#refresh()
+" Use <C-@> on vim
+inoremap <silent><expr> <c-@> coc#refresh()
+" Enter to execute auto import
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
+" add below to CocConfig
+"javascript.suggest.autoImports": true, 
+"typescript.suggest.autoImports": true
+
+" rust_doc view using Unite map to K
+let g:rust_doc#define_map_K = 0
+augroup vimrc-rust
+    autocmd!
+    autocmd FileType rust nnoremap <buffer><silent>K :<C-u>Unite rust/doc:cursor -no-empty -immediately<CR>
+    autocmd FileType rust vnoremap <buffer><silent>K :Unite rust/doc:visual -no-empty -immediately<CR>
+augroup END
+
 "{{ Clipboard support using xclip (xsel has a bug: https://bugs.chromium.org/p/chromium/issues/detail?id=515401)
 "비주얼블럭의 내용을 클립보드로 붙여넣기
 vmap <C-c> y:call system("xclip -selection clipboard -i", getreg("\""))<CR>
@@ -42,7 +75,7 @@ imap <C-b> <ESC>:call setreg("\"",system("xclip -selection clipboard -o"))<CR>pa
 "}}
 
 " uuidgen
-map <C-i> <Plug>Nuuid
+" map <C-i> <Plug>Nuuid
 
 " flow vim 설정법
 " https://vimawesome.com/plugin/coc-flow coc-flow 설치하되 CocConfig 에서 javascript.validate.enable 를 false 로 셋팅해야함.
