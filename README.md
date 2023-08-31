@@ -27,6 +27,13 @@ Plug 'sheerun/vim-polyglot' 이건 하이라이트인데, 설치해도 별로 �
 * yy: 라인 복사
 * p: 붙여넣기
 
+* ctrl + d / u half page 위아래 이동
+
+## fugitive
+* Gdiffsplit - git diff split 화면으로 보기
+   * do - diff 를 stage
+   * dp - unstaged diff 를 drop
+
 # link
 - 마크 사용법: https://vim.fandom.com/wiki/Using_marks
 - 내가 적는것 보다 이거 보는게 낫겠네: https://web.stanford.edu/class/cs107/resources/vim.html
