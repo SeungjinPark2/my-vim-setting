@@ -14,6 +14,8 @@ Plug 'kburdett/vim-nuuid'
 Plug 'rhysd/rust-doc.vim'
 
 Plug 'Shougo/unite.vim'
+
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " using spaces as indent, anything.
