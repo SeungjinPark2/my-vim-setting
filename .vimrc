@@ -1,5 +1,5 @@
 call plug#begin()
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
 
 Plug 'neoclide/coc.nvim'
 
@@ -13,9 +13,13 @@ Plug 'kburdett/vim-nuuid'
 
 Plug 'rhysd/rust-doc.vim'
 
-Plug 'Shougo/unite.vim'
+" Plug 'Shougo/unite.vim'
 
 Plug 'tpope/vim-fugitive'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " using spaces as indent, anything.
@@ -29,7 +33,8 @@ set shiftround
 set number relativenumber " hybrid relative number mode
 
 " NERDTree toggle setup
-nmap <F6> :NERDTreeToggle<CR>
+nmap <F6> :GFiles<CR>
+nmap <F7> :Lexplore<CR>
 
 " Coc related mappings
 nmap <silent> gd <Plug>(coc-definition)
