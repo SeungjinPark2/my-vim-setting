@@ -5,8 +5,7 @@ tsx 나 tsx 를 인식하지 못하는 경우가 있는데 이럴 때에는 "tss
 coc 는 기본적으로 자기 자신의 typescript 버전을 이용하곤 하는데 project 의 ts 를 사용하는 것이 올바름. \
 관련 이슈: https://github.com/neoclide/coc-tsserver/issues/436
 
-# 자주쓰는 키
-## normal mode
+## short cuts
 (4h 이런식으로 4칸씩 이동가능)
 * h: left
 * j: down
@@ -27,6 +26,9 @@ coc 는 기본적으로 자기 자신의 typescript 버전을 이용하곤 하�
 * dd: 라인 제거 및 복사
 * yy: 라인 복사
 * p: 붙여넣기
+
+* gt: tab 이동
+* gT: prev tab 이동
 
 * ctrl + d / u half page 위아래 이동
 
