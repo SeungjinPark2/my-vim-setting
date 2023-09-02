@@ -3,7 +3,7 @@ call plug#begin()
 
 Plug 'neoclide/coc.nvim'
 
-Plug 'sheerun/vimrc'
+" Plug 'sheerun/vimrc'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
@@ -27,6 +27,7 @@ call plug#end()
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set smartindent
 set expandtab
 set wrap
 set shiftround
