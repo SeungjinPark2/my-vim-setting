@@ -1,4 +1,4 @@
-# ppiippp-vim-setting
+# my-vim-setting
 
 ## coc-tsserver tsx 인식 문제
 tsx 나 tsx 를 인식하지 못하는 경우가 있는데 이럴 때에는 "tsserver.useLocalTsdk": true 옵션을 coc-settings.json 에 추가하라 \
