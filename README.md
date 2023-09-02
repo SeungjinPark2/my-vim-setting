@@ -1,8 +1,9 @@
 # ppiippp-vim-setting
 
-coc.nvim install 후에 ~/.vim/plugged/coc.nvim 이동 해서 yarn install 하기 \
-:CocInstall coc-json coc-tsserver coc-flow \
-Plug 'sheerun/vim-polyglot' 이건 하이라이트인데, 설치해도 별로 바뀌는게 없음. 걍 빼도됨.
+## coc-tsserver tsx 인식 문제
+tsx 나 tsx 를 인식하지 못하는 경우가 있는데 이럴 때에는 "tsserver.useLocalTsdk": true 옵션을 coc-settings.json 에 추가하라 \
+coc 는 기본적으로 자기 자신의 typescript 버전을 이용하곤 하는데 project 의 ts 를 사용하는 것이 올바름. \
+관련 이슈: https://github.com/neoclide/coc-tsserver/issues/436
 
 # 자주쓰는 키
 ## normal mode
@@ -33,6 +34,11 @@ Plug 'sheerun/vim-polyglot' 이건 하이라이트인데, 설치해도 별로 �
 * Gdiffsplit - git diff split 화면으로 보기
    * do - diff 를 stage
    * dp - unstaged diff 를 drop
+
+## wsl 에서 vim 사용시 ctrl + v 커맨드 충돌
+windows terminal 에서 vim 을 설치할 시 복붙을 지원함 (mac 은 macvim 을 따로 설치하라던데..) \
+그래서 multi line visual mode 인 기존 커맨드가 동작안함 \
+알아보니 ctrl q 으로 같은 동작을 할 수 있더라.
 
 # link
 - 마크 사용법: https://vim.fandom.com/wiki/Using_marks
