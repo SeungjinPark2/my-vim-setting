@@ -32,6 +32,7 @@ set expandtab
 set wrap
 set shiftround
 set number relativenumber " hybrid relative number mode
+set noswapfile
 
 " NERDTree toggle setup
 nmap <F6> :GFiles<CR>
