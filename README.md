@@ -37,6 +37,10 @@ coc 는 기본적으로 자기 자신의 typescript 버전을 이용하곤 하�
    * do - diff 를 stage
    * dp - unstaged diff 를 drop
 
+## Netrw (Lexplore)
+vim builtin file explorer
+* :Lexplorer 으로 split tab 을 열 수 있음
+
 ## wsl 에서 vim 사용시 ctrl + v 커맨드 충돌
 windows terminal 에서 vim 을 설치할 시 복붙을 지원함 (mac 은 macvim 을 따로 설치하라던데..) \
 그래서 multi line visual mode 인 기존 커맨드가 동작안함 \
