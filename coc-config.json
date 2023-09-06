@@ -1,4 +1,5 @@
 {
     "tsserver.useLocalTsdk": true,
-    "typescript.preferences.quoteStyle": "single"
+    "typescript.preferences.quoteStyle": "single",
+    "eslint.autoFixOnSave": true
 }
