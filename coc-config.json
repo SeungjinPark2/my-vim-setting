@@ -1,0 +1,4 @@
+{
+    "tsserver.useLocalTsdk": true,
+    "typescript.preferences.quoteStyle": "single"
+}
