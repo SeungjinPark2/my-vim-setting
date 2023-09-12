@@ -20,6 +20,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'junegunn/fzf.vim'
+
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 " using spaces as indent, anything.
