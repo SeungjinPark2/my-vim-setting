@@ -1,7 +1,7 @@
 call plug#begin()
 " Plug 'preservim/nerdtree'
 
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Plug 'sheerun/vimrc'
 
