@@ -68,6 +68,9 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 "javascript.suggest.autoImports": true, 
 "typescript.suggest.autoImports": true
 
+" auto trim whitespace onsave
+autocmd BufWritePre * :%s/\s\+$//e
+
 " rust_doc view using Unite map to K
 let g:rust_doc#define_map_K = 0
 augroup vimrc-rust
