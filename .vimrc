@@ -1,5 +1,5 @@
 call plug#begin()
-" Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -11,18 +11,22 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 Plug 'kburdett/vim-nuuid'
 
-Plug 'rhysd/rust-doc.vim'
+" Plug 'rhysd/rust-doc.vim'
 
 " Plug 'Shougo/unite.vim'
 
 Plug 'tpope/vim-fugitive'
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"
+" Plug 'junegunn/fzf.vim'
 
-Plug 'junegunn/fzf.vim'
+Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
 
 Plug 'mattn/emmet-vim'
 call plug#end()
+
+colorscheme moonfly
 
 " using spaces as indent, anything.
 " Check this https://vi.stackexchange.com/questions/4141/how-to-indent-as-spaces-instead-of-tab
@@ -38,7 +42,7 @@ set noswapfile
 
 " NERDTree toggle setup
 nmap <F6> :GFiles<CR>
-nmap <F7> :Lexplore<CR>
+nmap <F7> :NERDTree<CR>
 
 " Coc related mappings
 nmap <silent> gd <Plug>(coc-definition)
@@ -65,7 +69,7 @@ inoremap <silent><expr> <c-@> coc#refresh()
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 " add below to CocConfig
-"javascript.suggest.autoImports": true, 
+"javascript.suggest.autoImports": true,
 "typescript.suggest.autoImports": true
 
 " auto trim whitespace onsave
@@ -87,6 +91,10 @@ vmap <C-c> y:call system("xclip -selection clipboard -i", getreg("\""))<CR>
 " vmap <C-b> :call setreg("\"",system("xclip -selection clipboard -o"))<CR>p
 imap <C-b> <ESC>:call setreg("\"",system("xclip -selection clipboard -o"))<CR>pa
 "}}
+
+" enable termdebug
+packadd termdebug
+let g:termdebug_wide=1
 
 " uuidgen
 " map <C-i> <Plug>Nuuid
