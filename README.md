@@ -51,3 +51,6 @@ windows terminal 에서 vim 을 설치할 시 복붙을 지원함 (mac 은 macvi
 - 내가 적는것 보다 이거 보는게 낫겠네: https://web.stanford.edu/class/cs107/resources/vim.html
 - https://learnbyexample.github.io/vim_reference/cover.html
 - https://learnvimscriptthehardway.stevelosh.com/preface.html
+
+# tmux 에서 colorscheme 적용 안되는 문제
+https://stackoverflow.com/questions/10158508/lose-vim-colorscheme-in-tmux-mode 참조
