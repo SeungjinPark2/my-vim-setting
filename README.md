@@ -1,9 +1,13 @@
 # my-vim-setting
 
+latest 버번의 vim 을 먼저 설치할것.
+
 ## coc-tsserver tsx 인식 문제
 tsx 나 tsx 를 인식하지 못하는 경우가 있는데 이럴 때에는 "tsserver.useLocalTsdk": true 옵션을 coc-settings.json 에 추가하라 \
 coc 는 기본적으로 자기 자신의 typescript 버전을 이용하곤 하는데 project 의 ts 를 사용하는 것이 올바름. \
 관련 이슈: https://github.com/neoclide/coc-tsserver/issues/436
+
+\+ solidity 는 @nomicfoundation/coc-solidity 를 다운받아 쓸것
 
 ## short cuts
 (4h 이런식으로 4칸씩 이동가능)
@@ -54,3 +58,6 @@ windows terminal 에서 vim 을 설치할 시 복붙을 지원함 (mac 은 macvi
 
 # tmux 에서 colorscheme 적용 안되는 문제
 https://stackoverflow.com/questions/10158508/lose-vim-colorscheme-in-tmux-mode 참조
+
+# clipboard 적용 안되는 문제
+시스템에 xclip 이 설치 안되어있을 수 있으므로, `apt-get install xclip`

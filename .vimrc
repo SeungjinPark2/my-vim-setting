@@ -24,6 +24,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
 
 Plug 'mattn/emmet-vim'
+
+Plug 'dyng/ctrlsf.vim'
+
+Plug 'tpope/vim-surround'
 call plug#end()
 
 colorscheme moonfly
@@ -88,7 +92,7 @@ augroup END
 vmap <C-c> y:call system("xclip -selection clipboard -i", getreg("\""))<CR>
 
 "클립보드의 내용을 vim으로 붙여넣기
-" vmap <C-b> :call setreg("\"",system("xclip -selection clipboard -o"))<CR>p
+vmap <C-b> :call setreg("\"",system("xclip -selection clipboard -o"))<CR>p
 imap <C-b> <ESC>:call setreg("\"",system("xclip -selection clipboard -o"))<CR>pa
 "}}
 
